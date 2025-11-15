@@ -1,6 +1,6 @@
-import { build } from "vite";
+const vite = require("vite");
 
-build({
+vite.build({
   build: {
     outDir: "dist",
   }
