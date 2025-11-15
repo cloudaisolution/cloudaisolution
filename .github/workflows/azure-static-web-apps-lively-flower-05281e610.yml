@@ -4,14 +4,9 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    types: [opened, synchronize, reopened, closed]
-    branches:
-      - main
 
 jobs:
   build_and_deploy:
-    if: github.event_name == 'push' || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
@@ -25,8 +20,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Build with Vite
-        run: npx vite build
+      - name: Build with Vite via JS API
+        run: node build.js
 
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
