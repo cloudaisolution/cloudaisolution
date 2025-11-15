@@ -1,0 +1,5 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <rect x="7" y="7" width="10" height="10" rx="2" fill="#A855F7"/>
+  <path stroke="#A855F7" stroke-width="2" d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+  <path stroke="#A855F7" stroke-width="2" d="M5 5l2 2M19 5l-2 2M5 19l2-2M19 19l-2-2"/>
+</svg>

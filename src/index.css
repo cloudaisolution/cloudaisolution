@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -----------------------------
+   CLOUDTHAT STYLE DROPDOWN ANIMATION
+------------------------------ */
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeSlide {
+  animation: fadeSlide 0.18s ease-out;
+}
+
+/* Hide default scrollbar inside dropdown */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #475569; /* slate-600 */
+  border-radius: 4px;
+}
+
+/* Optional: Dropdown item global styling */
+.dropdown-item {
+  @apply block px-3 py-2 text-slate-300 hover:bg-slate-800 hover:text-white rounded-lg;
+}
